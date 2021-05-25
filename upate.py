@@ -9,12 +9,12 @@ conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 trackedPlayers = ["Hexivoid", "Fit", "OcharX"]
 
-#trackedPlayersElements = getTopPlayers()
+trackedPlayersElements = getTopPlayers()
 
-#for player in trackedPlayersElements:
-#    trackedPlayers.append(player.get_attribute("title"))
+for player in trackedPlayersElements:
+    trackedPlayers.append(player.get_attribute("title"))
 
-#print(trackedPlayers)
+print(trackedPlayers)
 
-#for players in trackedPlayers:
-#    updateStats(players)
+for players in trackedPlayers:
+    updateStats(players)
